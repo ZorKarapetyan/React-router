@@ -1,29 +1,27 @@
 import {Routes, Route, Link} from 'react-router-dom'
 import Home from './components/Home/Home'
 import About from './components/About/About'
-
+import Contact from './components/Contact/Contacts'
+import classes from './UI/global.module.css'
 
 const App = () => {
   return (
-    <div>
+  <div>
+    <header className={classes['header-nav']}>
+      <Link className={classes['link']} to='/home'> Home </Link>
+      <Link className={classes['link']} to='./about'> About </Link>
+      <Link className={classes['link']} to='./contact'> Contact </Link>
+    </header>
 
-  
-  <header>
-  {/* just backslash for home page */}
-  <Link to='/'> Home </Link>
-  {/* to is equal to about page to be able to path on it later */}
-  <Link to='./about'> About </Link>
-  {/* to is equal to News page to be able to path on it later */}
-</header>
-
-<section>
- <Routes>
-  <Route path='/' element={ <Home/> } />
-  <Route path='/about' element={<About />} />
- </Routes>
-</section>
+    <section className={classes['main']}>
+        <Routes>
+         <Route path='/home' element={ <Home/> } />
+         <Route path='/about' element={<About />} />
+         <Route path='/contact' element={<Contact />} />
+        </Routes>
+    </section>
 </div>
-    )
+)
   
 }
 

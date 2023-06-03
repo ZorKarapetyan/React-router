@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <h1> About </h1>
+        <h3> My Name Is Zorik Karapetyan, I'm a 18 years old Front-End developer </h3>
     )
 }
 
